@@ -779,7 +779,7 @@ function nom(prenom){
 console.log(nom(" Mika"))
 
 // function boucle(chiffre){
-//      for (i = 0; i < chiffre; i++){
+//      for (i = 0; i < 16; i++){
 //         if(i = 0){
 //             i += 2
 //         }else {
@@ -789,4 +789,23 @@ console.log(nom(" Mika"))
 //      }
 //      return i
 // }
-console.log(boucle(16))
+// console.log(boucle(16))
+
+
+let boutons = document.getElementsByClassName("clickable")
+
+console.log(boutons)
+
+for (let i = 0; i < boutons.length; i++) {
+    console.log(boutons[i])
+    boutons[i].addEventListener('click', function() {
+        if (i != 1) {
+            alert('Ce bouton fonctionne')
+        }else {
+            alert('Celui-ci est cassé')
+        }
+    }
+    
+)}
+ console.log(boutons.length)
+ 
