@@ -189,7 +189,13 @@ let placesLeft = 23;
             }
             console.log(i)
 
-
+            for (i = 20; i >= 0; i-=2){
+                if(i!=0){
+                    document.writeln(i+" - ");
+                }else {document.writeln(i);
+                }
+            }
+            
 /////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -666,21 +672,21 @@ var p = document.getElementById('paragraphe');
 
                 // aa()
 
-                let divBtns = document.getElementById('boutons');
-                let boutonsFonctNonFonct = document.getElementsByClassName('boutons_fonct');
-                let boutonFonct = document.getElementsByClassName('btn_fonct');
-                let boutonNonFonct = document.getElementsByClassName('btn_non_fonct');
+                // let divBtns = document.getElementById('boutons');
+                // let boutonsFonctNonFonct = document.getElementsByClassName('boutons_fonct');
+                // let boutonFonct = document.getElementsByClassName('btn_fonct');
+                // let boutonNonFonct = document.getElementsByClassName('btn_non_fonct');
                 
-                boutonFonct = true;
-                boutonNonFonct = false; 
+                // boutonFonct = true;
+                // boutonNonFonct = false; 
 
-                console.log(boutonFonct);
-                console.log(boutonNonFonct);
-                console.log(boutonsFonctNonFonct);
+                // console.log(boutonFonct);
+                // console.log(boutonNonFonct);
+                // console.log(boutonsFonctNonFonct);
 
-                boutonsFonctNonFonct.addEventListener('click', function(){
-                    boutonFonct.innerHTML = "Cool";
-                })
+                // boutonsFonctNonFonct.addEventListener('click', function(){
+                //     boutonFonct.innerHTML = "Cool";
+                // })
 
 
 
@@ -758,3 +764,29 @@ switch (x) {
 }
 
 
+function ajoute (a, b){
+    return a + b;
+}
+
+
+
+console.log(ajoute(10, 15))
+
+function nom(prenom){
+    return "Bonjour, je m'appelle" + prenom;
+}
+
+console.log(nom(" Mika"))
+
+// function boucle(chiffre){
+//      for (i = 0; i < chiffre; i++){
+//         if(i = 0){
+//             i += 2
+//         }else {
+//             i++
+//         }
+//         console.log(i)
+//      }
+//      return i
+// }
+console.log(boucle(16))
