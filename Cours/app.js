@@ -1107,18 +1107,23 @@ const promptTest = document.getElementById('prompt_test')
 
 let promptButton = document.getElementById('prompt_button');
 
-// promptButton.addEventListener('click', function(){
+promptButton.addEventListener('click', function(){
     
     let aventure = prompt("Do you want shoot or dribble ?").toLowerCase();
-    if (aventure === 'plu'){
+    if ('plu'){
         prompt("yess pass")
-            // if(prompt === 'pass'){
-            //     prompt('oh yess')
-            // }else {
-            //     prompt('input error')
-            // }
+            if(value.string === 'pass'){
+                prompt('oh yess')
+            }else {
+                prompt('input error')
+                if('error'){
+                    prompt('Oh ouiiiiiiiiiiii')
+                }else {
+                    prompt('Oh ouiiiiiiiii quand même')
+                }
+            }
         
     }else {
         prompt('oh nooo again')
     }
-// })
+})
