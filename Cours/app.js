@@ -1053,30 +1053,72 @@ for (let i = 0; i < boutons.length; i++) {
 
 const promptTest = document.getElementById('prompt_test')
 
-let promptButton = document.getElementById('prompt_button');
+// let promptButton = document.getElementById('prompt_button');
 
-promptButton.addEventListener('click', function(){
-    let Prompt = prompt('SHOOT or DRIBBLE')
+// promptButton.addEventListener('click', function(){
+//     let Prompt = prompt('shoot or dribble')
 
-    if (window.returnValue === 'Dribble'){
-        prompt("coool") 
+//     if (Prompt === 'dribble'){
+//         prompt("coool") 
 
-        if (Prompt === 'shot'){
-            prompt("yesssss")
-        }else {
-            prompt("oopsiii")
+//         if (Prompt === 'shot'){
+//             prompt("yesssss")
+//         }else {
+//             prompt("oopsiii")
 
-            if (Prompt === 'pass'){
-                prompt("nooooo")
-            }else{
-                prompt("Try again")
-            }
-        }
+//             if (Prompt === 'pass'){
+//                 prompt("nooooo")
+//             }else{
+//                 prompt("Try again")
+//             }
+//         }
 
-    }else {
-        prompt("dommage")
-    }
-})
-
+//     }else {
+//         prompt("dommage")
+//     }
+// })
+// console.log(prompt)
 // const input = prompt("What's your name?");
 // alert('Your name is' + input);
+
+
+// let promptButton = document.getElementById('prompt_button');
+
+// promptButton.addEventListener('click', function(){
+    
+//     let aventure = prompt("shoot, dribble")
+//     if (aventure!==null){
+
+//         if (aventure.length){
+
+//             if(aventure[0] ==='d'){
+//                 prompt('oh yess')
+//             }else if(input.value.toLowerCase()==='s'){
+//                 prompt('Oh noooo')
+//             }else {
+//                 prompt('input error')
+//             }
+//         }else {
+//             prompt("oopsiii")
+//         }
+//     }else {
+//     }
+// })
+
+let promptButton = document.getElementById('prompt_button');
+
+// promptButton.addEventListener('click', function(){
+    
+    let aventure = prompt("Do you want shoot or dribble ?").toLowerCase();
+    if (aventure === 'plu'){
+        prompt("yess pass")
+            // if(prompt === 'pass'){
+            //     prompt('oh yess')
+            // }else {
+            //     prompt('input error')
+            // }
+        
+    }else {
+        prompt('oh nooo again')
+    }
+// })
