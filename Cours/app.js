@@ -843,6 +843,8 @@ function boucle(chiffre) {
 console.log(boucle(16))
 
 
+//////////////////////Fonctionnel
+
 // let boutons = document.getElementsByClassName("clickable")
 
 // console.log(boutons)
@@ -860,27 +862,142 @@ console.log(boucle(16))
 // )}
 
 
-let boutons = document.getElementsByTagName('button')
+let boutons = document.getElementsByClassName("clickable")
 
 console.log(boutons)
 
 for (let i = 0; i < boutons.length; i++) {
     console.log(boutons[i])
     boutons[i].addEventListener('click', function() {
-        if (boutons[i].this.classList.toggle === "broken") {
-            alert('Ce bouton fonctionne')
+        if (boutons[i].className === "clickable broken") {
+            alert('Ce bouton est cassé')
+        }else if(boutons[i].className === "clickable broken joke"){
+            alert('Ah bah non en fait... :p')
         }else {
-            alert('Celui-ci est cassé')
+            alert('Ce bouton fonctionne')
         }
     }
 
 )}
+
+
+
+// let clickable = document.getElementsByClassName("clickable")
+// let broken = document.getElementsByClassName("broken")
+
+// console.log(clickable)
+
+// for (let i = 0; i < clickable.length; i++) {
+//     console.log(clickable[i])
+//     clickable[i].addEventListener('click', function() {
+//         if (clickable) {
+//             alert('Celui-ci est cassé')
+//         }else if (clickable){
+//             alert('Ce bouton fonctionne')
+//         }else {
+//             alert('oopsss')
+//         }
+//     }
+
+// )
+// }
+
+
+// let boutons = document.getElementsByClassName("clickable")
+// let boutons = document.querySelectorAll('button')
+// let broken = document.getElementsByClassName("broken")
+// boutons = Array.from(boutons);
+// console.log(boutons)
+
+// for (let i = 0; i < boutons.length; i++) {
+//     console.log(boutons[i])
+//     boutons[i].addEventListener('click', function() {
+//         if (boutons && broken) {
+//             alert('Ce bouton fonctionne')
+//         }else {
+//             alert('Celui-ci est cassé')
+//         }
+//     }
+
+// )}
+
+
+
+
+
+
+
+
+// const bou1=  document.getElementById('boutons_clickable')
+// let bou2 = bou1.querySelectorAll('button');
+// let clickable = document.getElementsByClassName('clickable');
+// let broken = document.getElementsByClassName('broken');
+
+// console.log(clickable)
+// console.log(broken)
+
+
+// bou2 = Array.from(bou2)
+// console.log(bou2);
+// bou1.addEventListener('click', function() {
+
+    
+
+// if (DOMTokenList === "clickable broken"){
+//     alert('Ce bouton fonctionne')
+// }else {
+//     alert('Ce bouton est cassé')
+// }
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let boutons = document.getElementsByTagName('button')
+
+// console.log(boutons)
+
+// for (let i = 0; i < boutons.length; i++) {
+//     console.log(boutons[i])
+//     boutons[i].addEventListener('click', function() {
+//         if (boutons[i].this.classList.toggle === "broken") {
+//             alert('Ce bouton fonctionne')
+//         }else {
+//             alert('Celui-ci est cassé')
+//         }
+//     }
+
+// )}
 // console.log(boutons.length)
 
 // for (let i = 0; i < boutons.length; i++) {
 //     console.log(boutons[i])
 //     boutons[i].addEventListener('click', function() {
-//         if (.classList.contains(broken)) {
+//         if (classList.contains(broken)) {
 //             alert('Ce bouton fonctionne')
 //         }else {
 //             alert('Celui-ci est cassé')
