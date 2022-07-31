@@ -1144,17 +1144,26 @@ promptButton.addEventListener('click', function(){
     //     }
     // }
 
-    if(aventure.toLowerCase() == "verseau"){
-            prompt('AZERTY')
-    }else{
-            prompt('Et zut')
-            if(aventure.toLowerCase() == "zut"){
-                prompt('Ouiii')
-        }else{
-                prompt('Noon')
-            }
-        }
+    // if(aventure.toLowerCase() == "verseau"){
+    //         prompt('AZERTY')
+    // }else{
+    //         prompt('Et zut')
+    //         if(aventure.toLowerCase() == "zut"){
+    //             prompt('Ouiii')
+    //     }else{
+    //             prompt('Noon')
+    //         }
+    //     }
 
-        
+        if(aventure.toLowerCase() == "a"){
+            prompt('B')
+            if(aventure.toLowerCase() == "b"){
+                prompt('c')
+            }else {
+                prompt('d')
+            }
+        }else {
+            prompt("En fait c'était ça depuis le début")
+        }
 
     })
