@@ -1109,21 +1109,52 @@ let promptButton = document.getElementById('prompt_button');
 
 promptButton.addEventListener('click', function(){
     
-    let aventure = prompt("Do you want shoot or dribble ?").toLowerCase();
-    if ('plu'){
-        prompt("yess pass")
-            if(value.string === 'pass'){
-                prompt('oh yess')
-            }else {
-                prompt('input error')
-                if('error'){
-                    prompt('Oh ouiiiiiiiiiiii')
-                }else {
-                    prompt('Oh ouiiiiiiiii quand même')
-                }
-            }
+    let aventure = prompt("Do you want shoot or dribble ?");
+    // if ('plu'){
+    //     prompt("yess pass")
+    //         if(value.string === 'pass'){
+    //             prompt('oh yess')
+    //         }else {
+    //             prompt('input error')
+    //             if('error'){
+    //                 prompt('Oh ouiiiiiiiiiiii')
+    //             }else {
+    //                 prompt('Oh ouiiiiiiiii quand même')
+    //             }
+    //         }
         
-    }else {
-        prompt('oh nooo again')
-    }
-})
+    // }else {
+    //     prompt('oh nooo again')
+    // }
+
+    // if(aventure.toLowerCase() == "verseau"){
+    //     console.log('AZERTY')
+
+    //     if(aventure.toLowerCase() == "gemeau"){
+    //         console.log('YESSS')
+    //     }else{
+    //         console.log('Noooo')
+    //     }
+    // }else {
+    //     console.log('QWERTY');
+    //     if(aventure.toLowerCase() == "vierge"){
+    //         console.log("Ah d'accord")
+    //     }else{
+    //         console.log('Et zut')
+    //     }
+    // }
+
+    if(aventure.toLowerCase() == "verseau"){
+            prompt('AZERTY')
+    }else{
+            prompt('Et zut')
+            if(aventure.toLowerCase() == "zut"){
+                prompt('Ouiii')
+        }else{
+                prompt('Noon')
+            }
+        }
+
+        
+
+    })
