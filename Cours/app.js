@@ -1064,7 +1064,7 @@ const promptTest = document.getElementById('prompt_test')
 //         if (Prompt === 'shot'){
 //             prompt("yesssss")
 //         }else {
-//             prompt("oopsiii")
+//             prompt("noo")
 
 //             if (Prompt === 'pass'){
 //                 prompt("nooooo")
@@ -1105,6 +1105,11 @@ const promptTest = document.getElementById('prompt_test')
 //     }
 // })
 
+
+
+
+
+
 let promptButton = document.getElementById('prompt_button');
 
 promptButton.addEventListener('click', function(){
@@ -1117,9 +1122,9 @@ promptButton.addEventListener('click', function(){
     //         }else {
     //             prompt('input error')
     //             if('error'){
-    //                 prompt('Oh ouiiiiiiiiiiii')
+    //                 prompt('ouiiiiiiiiiiii')
     //             }else {
-    //                 prompt('Oh ouiiiiiiiii quand même')
+    //                 prompt('ouiiiiiiiii quand même')
     //             }
     //         }
         
@@ -1155,15 +1160,23 @@ promptButton.addEventListener('click', function(){
     //         }
     //     }
 
-        if(aventure.toLowerCase() == "a"){
-            prompt('B')
-            if(aventure.toLowerCase() == "b"){
-                prompt('c')
+        if(aventure.toLowerCase() === "bonjour"){
+            aventure = prompt('B')
+            if(aventure.toLowerCase() == "bienvenue"){
+                aventure = prompt('c')
+                if(aventure.toLowerCase() === "RE"){
+                    aventure = prompt('ça a marché')
+                }else {
+                    aventure = prompt("ça n'a pas marché")
+                }
             }else {
                 prompt('d')
             }
         }else {
-            prompt("En fait c'était ça depuis le début")
+            prompt("Toujours pas")
         }
 
     })
+
+//     var name = prompt("Veuillez saisir votre nom", "");
+// alert("Bonjour " + name);
