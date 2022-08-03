@@ -1151,7 +1151,9 @@ const promptTest = document.getElementById('prompt_test')
 // })
 
 
-
+function ajout (){
+    aventureDiv.innerText =  "Bravo tu es n ° " + placeRace;
+}
 
 
 let aventureDiv = document.getElementById('aventure');
@@ -1188,11 +1190,11 @@ promptButton.addEventListener('click', function(){
                         if(aventure.toUpperCase() === "OUI"){
                             aventure = prompt("On a pris le risque, ça n'a pas fonctionné, tes pneus sont trop usés, la course est terminée")
                             placeRace += 6; 
-                            aventureDiv.innerText = "Tu termines la course en position n ° " + placeRace;
+                            ajout();
                         }else{
                             aventure = prompt("Ok tes pneus ont été changés à 11 tours de l'arrivée, la course est terminée")
                             placeRace +=2;
-                            aventureDiv.innerText = "Tu termines la course en position n ° " + placeRace;
+                            ajout();
                         }
                     }
                 }else {
@@ -1201,17 +1203,17 @@ promptButton.addEventListener('click', function(){
                     if(aventure.toUpperCase() === "SOFT" ){
                         aventure = prompt("Super choix ! En seulement trois tours tu as récupéré deux places ! La course est terminée !")
                         placeRace -= 2;
-                        aventureDiv.innerText = "Tu termines la course en position n ° " + placeRace;
+                        ajout();
                     }else {
                         aventure = prompt("Ok, c'est toi qui vois, on te place des mediums, tu as perdu encore une place après ce changement, tu veux essayer une stratégie de pilotage un peu plus agressive, OUI ou NON ?")
                         placeRace++;
                         if(aventure.toUpperCase() === "OUI"){
                             aventure = prompt("Génial, tu as pu récupérer 4 places, la course est terminée !")
                             placeRace -= 4;
-                            aventureDiv.innerText = "Tu termines la course en position n ° " + placeRace;
+                            ajout();
                         }else {
                             aventure = prompt("D'accord, ta position n'a pas bougée, la course est terminée !")
-                            aventureDiv.innerText = "Tu termines la course en position n ° " + placeRace;
+                            ajout();
                         }
                     }
                 }
@@ -1227,17 +1229,17 @@ promptButton.addEventListener('click', function(){
                         if(aventure.toUpperCase() === "CONTINUER"){
                             aventure = prompt("Bravo tu as gagné une place de plus, la course est terminée !")
                             placeRace--;
-                            aventureDiv.innerText = "Tu termines la course en position n ° " + placeRace;
+                            ajout();
                         }else{
                             aventure = prompt("D'accord, ta position ne bouge plus et la course se termine ")
-                            aventureDiv.innerText = "Tu termines la course en position n ° " + placeRace;
+                            ajout();
                         }
                     }else{
                         aventure = prompt("Ok, pour l'instant tu maintiens ta position, veux tu laisser PASSER ton coéquipier ou rester DEVANT ?")
                         if(aventure.toUpperCase() === "PASSER"){
                             aventure = prompt("C'est honorable de ta part, tu perds du coup une position et tu finis la course")
                             placeRace++
-                            aventureDiv.innerText = "Tu termines la course en position n ° " + placeRace;
+                            ajout();
                         }else{
                             aventure = prompt("D'accord c'est de bonne guerre, ton coéquipier a pu avoir le DRS, il t'a doublé malgré tout ainsi que d'autres pilotes pour finir 1 er")
                             aventureDiv.innerText = "Ton coéquipier a terminé 1 er et toi tu termines la course en position n ° " + placeRace;
@@ -1249,18 +1251,20 @@ promptButton.addEventListener('click', function(){
                     if(aventure.toUpperCase() === "D'ACCORD"){
                         aventure = prompt("Très bien, tu finis la course dans cette position !")
                         console.log(placeRace)
-                        aventureDiv.innerText = "Tu termines la course en position n ° " + placeRace;
+                        ajout();
                     }else{
                         aventure = prompt("D'accord, la direction de course t'as infligé 10 s de pénalité, tu perds 6 places, la course est terminée")
                         placeRace +=6
-                        aventureDiv.innerText = "Tu termines la course en position n ° " + placeRace;
+                        ajout();
                     }
                 }
             }
         }else {
             prompt("Mince tu as trop attendu et la voiture de derrière a percuté la tienne, elle est inutilisable")
-            aventureDiv.innerText = "Tu es disqualifié";
-            placeRace = DSQ
+            // let ajout = aventureDiv.innerText = "Tu es disqualifié";
+            // ajout.style.color = "red"
+            aventureDiv.innerText = "Malheureusement, tu es disqualifié !";
+            placeRace = "DSQ"
         }
         
 
