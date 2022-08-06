@@ -45,75 +45,108 @@
 }
 
 .btn {
-  margin-top: 50px;
+  position: relative;
+  top: 700px;
 }
 
 .aventure_box {
   animation: move_box 4.4s ease-in forwards;
   transform-origin: bottom;
 }
-.aventure_box + .box_1 {
-  animation: move_box_1 4.4s ease-in forwards;
-  transform-origin: bottom;
-}
-.aventure_box + .box_2 {
-  animation: move_box_2 4.4s ease-in forwards;
-  transform-origin: bottom;
-}
 .aventure_box span {
-  transform: translateY(500%) rotate(0deg) scale(1);
+  animation: move_box_1 5s ease forwards;
   transform-origin: bottom;
 }
 
 .aventure_box {
   border: 2px solid black;
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   overflow: hidden;
   color: red;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: black 15px 15px;
+  box-shadow: black 15px 15px 15px;
 }
 .aventure_box span {
   display: inline-block;
   display: flex;
-  transform: translateY(2500%) rotate(360deg);
   justify-content: center;
   align-items: center;
 }
 
+.stick {
+  height: 300px;
+  width: 0px;
+  border: 4px solid black;
+}
+
+.stick {
+  animation: move_stick 4.4s ease-in forwards;
+  transform-origin: top;
+}
+
 @keyframes move_box {
   0% {
-    transform: scaleY(0.1) perspective(150px) rotateX(45deg);
+    transform: scaleY(0.01) perspective(200px);
   }
   100% {
-    transform: scaleY(2) perspective(150px) rotateX(45deg);
+    transform: scaleY(1) perspective(300px) translateZ(60px);
   }
 }
 @keyframes move_box_1 {
   0% {
-    transform: scaleY(0.1) perspective(150px) rotateX(45deg);
+    transform: translateY(500%) scale(0.2) rotate(0deg);
   }
   100% {
-    transform: scaleY(1) perspective(150px) rotateX(45deg);
+    transform: translateY(0%) scale(3) rotate(360deg);
   }
 }
-@keyframes move_box_2 {
+@keyframes move_stick {
   0% {
-    transform: scaleY(0.1) perspective(150px) rotateX(45deg);
+    transform: scaleY(0);
   }
   100% {
-    transform: scaleY(1) perspective(150px) rotateX(45deg);
+    transform: scaleY(1);
   }
 }
 #container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  border: 1px solid red;
+  margin-left: 500px;
+  position: absolute;
+}
+
+.chargement {
+  position: relative;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #2c3e50;
+  border-bottom: 10px solid #e74c3c;
+  width: 100px;
+  height: 100px;
+  animation: 3s linear infinite;
+}
+
+.chargement::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100px;
+  height: 100px;
+  border-left: 10px solid #e74c3c;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
