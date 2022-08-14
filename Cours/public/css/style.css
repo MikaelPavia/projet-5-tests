@@ -50,16 +50,13 @@
 }
 
 .aventure_box {
-  animation: move_box 4.4s ease-in forwards;
-  transform-origin: bottom;
-}
-.aventure_box span {
-  animation: move_box_1 5s ease forwards;
-  transform-origin: bottom;
+  animation: move_box 3s ease-in forwards;
+  transform-origin: center;
 }
 
+
 .aventure_box {
-  border: 2px solid black;
+  border: 5px solid black;
   height: 300px;
   width: 300px;
   overflow: hidden;
@@ -67,50 +64,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: black 15px 15px 15px;
-}
-.aventure_box span {
-  display: inline-block;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.stick {
-  height: 300px;
-  width: 0px;
-  border: 4px solid black;
+  box-shadow: black 10px 10px 10px;
+  border-radius: 20px;
+  border-top-color: #FF1212;
+  border-bottom-color: #FF1212;
+  border-left-color: #000558;
+  border-right-color: #000558;
 }
 
-.stick {
-  animation: move_stick 4.4s ease-in forwards;
-  transform-origin: top;
-}
+
+
 
 @keyframes move_box {
   0% {
-    transform: scaleY(0.01) perspective(200px);
+    transform: scale(0.01) rotate(0deg);
   }
   100% {
-    transform: scaleY(1) perspective(300px) translateZ(60px);
+    transform: scale(1.2) rotate(360deg);
   }
 }
-@keyframes move_box_1 {
-  0% {
-    transform: translateY(500%) scale(0.2) rotate(0deg);
-  }
-  100% {
-    transform: translateY(0%) scale(3) rotate(360deg);
-  }
-}
-@keyframes move_stick {
-  0% {
-    transform: scaleY(0);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
+
+
+
 #container {
   display: flex;
   flex-direction: column;
@@ -120,45 +95,4 @@
   position: absolute;
 }
 
-.chargement {
-  position: relative;
-  border: 10px solid #f3f3f3;
-  border-top: 10px solid #2c3e50;
-  border-bottom: 10px solid #e74c3c;
-  width: 100px;
-  height: 100px;
-  animation: 3s linear infinite;
-}
-
-.chargement::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 100px;
-  height: 100px;
-  border-top: 10px solid green;
-  border-left: 10px solid blue;
-  border-right: 10px solid yellow;
-  border-bottom: 10px solid pink;
-  animation: border 4s ease forwards;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes border {
-  0% {
-    transform: scaleY(0);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
 /*# sourceMappingURL=style.css.map */
